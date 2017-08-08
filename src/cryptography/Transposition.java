@@ -1066,19 +1066,18 @@ public class Transposition extends JFrame implements ActionListener{
                         if(width.equals("Right")){
                             
                             //store the two containers into one, encryption process#1
-                            finCon.add(con1.get(con1.size()-1));
-                            for(i=con2.size()-1;i>=0;i--){
-                                
-                                finCon.add(con2.get(i));
-                                
-                            }
-                            for(i=0;i<con1.size()-1;i++){
+                            finCon.add(con2.get(0));
+                            for(i=0;i<con1.size();i++){
                                 
                                 finCon.add(con1.get(i));
                                 
                             }
+                            for(i=con2.size()-1;i>0;i--){
+                                
+                                finCon.add(con2.get(i));
+                                
+                            }
                             
-                            //transforming the character array to string then place it on output textarea
                             for(i=0;i<finCon.size();i++){
                                 
                                 output=output.concat(finCon.get(i).toString());
@@ -1148,18 +1147,19 @@ public class Transposition extends JFrame implements ActionListener{
                         else if(width.equals("Left")){
                             
                             //store the two containers into one, encryption process#1
-                            finCon.add(con2.get(0));
-                            for(i=0;i<con1.size();i++){
-                                
-                                finCon.add(con1.get(i));
-                                
-                            }
-                            for(i=con2.size()-1;i>0;i--){
+                            finCon.add(con1.get(con1.size()-1));
+                            for(i=con2.size()-1;i>=0;i--){
                                 
                                 finCon.add(con2.get(i));
                                 
                             }
+                            for(i=0;i<con1.size()-1;i++){
+                                
+                                finCon.add(con1.get(i));
+                                
+                            }
                             
+                            //transforming the character array to string then place it on output textarea
                             for(i=0;i<finCon.size();i++){
                                 
                                 output=output.concat(finCon.get(i).toString());
@@ -1192,18 +1192,17 @@ public class Transposition extends JFrame implements ActionListener{
                         if(width.equals("Right")){
                             
                             //store the two containers into one, encryption process#1
-                            for(i=con1.size()-1;i>=0;i--){
-                                
-                                finCon.add(con1.get(i));
-                                
-                            }
                             for(i=0;i<con2.size();i++){
                                 
                                 finCon.add(con2.get(i));
                                 
                             }
+                            for(i=con1.size()-1;i>=0;i--){
+                                
+                                finCon.add(con1.get(i));
+                                
+                            }
                             
-                            //transforming the character array to string then place it on output textarea
                             for(i=0;i<finCon.size();i++){
                                 
                                 output=output.concat(finCon.get(i).toString());
@@ -1275,14 +1274,14 @@ public class Transposition extends JFrame implements ActionListener{
                         else if(width.equals("Left")){
                             
                             //store the two containers into one, encryption process#1
-                            for(i=0;i<con2.size();i++){
-                                
-                                finCon.add(con2.get(i));
-                                
-                            }
                             for(i=con1.size()-1;i>=0;i--){
                                 
                                 finCon.add(con1.get(i));
+                                
+                            }
+                            for(i=0;i<con2.size();i++){
+                                
+                                finCon.add(con2.get(i));
                                 
                             }
                             
@@ -1354,32 +1353,31 @@ public class Transposition extends JFrame implements ActionListener{
                         if(width.equals("Right")){
                             
                             //store the two containers into one, encryption process#1
-                            finCon.add(con1.get(con1.size()-1));
-                            finCon.add(con2.get(con2.size()-1));
-                            for(i=con3.size()-1;i>=0;i--){
+                            for(i=0;i<con3.size();i++){
                                 
                                 finCon.add(con3.get(i));
                                 
                             }
-                            finCon.add(con2.get(0));
-                            for(i=0;i<con1.size()-1;i++){
+                            finCon.add(con2.get(con2.size()-1));
+                            for(i=con1.size()-1;i>=0;i--){
                                 
                                 finCon.add(con1.get(i));
                                 
                             }
-                            for(i=con2.size()-2;i>0;i--){
+                            for(i=0;i<con2.size()-1;i++){
                                 
                                 finCon.add(con2.get(i));
                                 
                             }
                             
-                            //transforming the character array to string then place it on output textarea
                             for(i=0;i<finCon.size();i++){
                                 
                                 output=output.concat(finCon.get(i).toString());
                                 
                             }
                             area.setOutput(output);
+                            
+                            
                             
                         }
                         
@@ -1424,19 +1422,21 @@ public class Transposition extends JFrame implements ActionListener{
                         
                         if(width.equals("Right")){
                             
-                            //store the two containers into one, encryption process#1
-                            for(i=con3.size()-1;i>=0;i--){
-                                
-                                finCon.add(con3.get(i));
-                                
-                            }
-                            finCon.add(con2.get(0));
-                            for(i=0;i<con1.size();i++){
+                             //store the two containers into one, encryption process#1
+                            finCon.add(con3.get(con3.size()-1));
+                            finCon.add(con2.get(con2.size()-1));
+                            for(i=con1.size()-1;i>=0;i--){
                                 
                                 finCon.add(con1.get(i));
                                 
                             }
-                            for(i=con2.size()-1;i>0;i--){
+                            finCon.add(con2.get(0));
+                            for(i=0;i<con3.size()-1;i++){
+                                
+                                finCon.add(con3.get(i));
+                                
+                            }
+                            for(i=con2.size()-2;i>0;i--){
                                 
                                 finCon.add(con2.get(i));
                                 
@@ -1450,30 +1450,32 @@ public class Transposition extends JFrame implements ActionListener{
                             }
                             area.setOutput(output);
                             
+                            
+                            
                         }
                         
                         else if(width.equals("Left")){
                             
                             //store the two containers into one, encryption process#1
-                            finCon.add(con3.get(0));
-                            finCon.add(con2.get(0));
-                            for(i=0;i<con1.size();i++){
+                            for(i=con1.size()-1;i>=0;i--){
                                 
                                 finCon.add(con1.get(i));
                                 
                             }
-                            finCon.add(con2.get(con2.size()-1));
-                            for(i=con3.size()-1;i>0;i--){
+                            finCon.add(con2.get(0));
+                            finCon.add(con3.get(0));
+                            for(i=1;i<con3.size();i++){
                                 
                                 finCon.add(con3.get(i));
                                 
                             }
-                            for(i=1;i<con2.size()-1;i++){
+                            for(i=con2.size()-1;i>0;i--){
                                 
                                 finCon.add(con2.get(i));
                                 
                             }
                             
+                            //transforming the character array to string then place it on output textarea
                             for(i=0;i<finCon.size();i++){
                                 
                                 output=output.concat(finCon.get(i).toString());
@@ -1506,6 +1508,37 @@ public class Transposition extends JFrame implements ActionListener{
                         if(width.equals("Right")){
                             
                             //store the two containers into one, encryption process#1
+                            finCon.add(con3.get(0));
+                            finCon.add(con2.get(0));
+                            for(i=0;i<con1.size();i++){
+                                
+                                finCon.add(con1.get(i));
+                                
+                            }
+                            finCon.add(con2.get(con2.size()-1));
+                            for(i=con3.size()-1;i>0;i--){
+                                
+                                finCon.add(con3.get(i));
+                                
+                            }
+                            for(i=1;i<con2.size()-1;i++){
+                                
+                                finCon.add(con2.get(i));
+                                
+                            }
+                            
+                            for(i=0;i<finCon.size();i++){
+                                
+                                output=output.concat(finCon.get(i).toString());
+                                
+                            }
+                            area.setOutput(output);
+                            
+                        }
+                        
+                        else if(width.equals("Left")){
+                            
+                           //store the two containers into one, encryption process#1
                             for(i=con1.size()-1;i>=0;i--){
                                 
                                 finCon.add(con1.get(i));
@@ -1533,37 +1566,6 @@ public class Transposition extends JFrame implements ActionListener{
                             
                         }
                         
-                        else if(width.equals("Left")){
-                            
-                            //store the two containers into one, encryption process#1
-                            finCon.add(con1.get(0));
-                            finCon.add(con2.get(0));
-                            for(i=0;i<con3.size();i++){
-                                
-                                finCon.add(con3.get(i));
-                                
-                            }
-                            finCon.add(con2.get(con2.size()-1));
-                            for(i=con1.size()-1;i>0;i--){
-                                
-                                finCon.add(con1.get(i));
-                                
-                            }
-                            for(i=1;i<con2.size()-1;i++){
-                                
-                                finCon.add(con2.get(i));
-                                
-                            }
-                            
-                            for(i=0;i<finCon.size();i++){
-                                
-                                output=output.concat(finCon.get(i).toString());
-                                
-                            }
-                            area.setOutput(output);
-                            
-                        }
-                        
                         else{
                             
                             JOptionPane.showMessageDialog(this,"Please indicate whether starting from right or left!");
@@ -1577,20 +1579,18 @@ public class Transposition extends JFrame implements ActionListener{
                         if(width.equals("Right")){
                             
                             //store the two containers into one, encryption process#1
-                            finCon.add(con3.get(con3.size()-1));
-                            finCon.add(con2.get(con2.size()-1));
-                            for(i=con1.size()-1;i>=0;i--){
-                                
-                                finCon.add(con1.get(i));
-                                
-                            }
-                            finCon.add(con2.get(0));
-                            for(i=0;i<con3.size()-1;i++){
+                            for(i=con3.size()-1;i>=0;i--){
                                 
                                 finCon.add(con3.get(i));
                                 
                             }
-                            for(i=con2.size()-2;i>0;i--){
+                            finCon.add(con2.get(0));
+                            for(i=0;i<con1.size();i++){
+                                
+                                finCon.add(con1.get(i));
+                                
+                            }
+                            for(i=con2.size()-1;i>0;i--){
                                 
                                 finCon.add(con2.get(i));
                                 
@@ -1603,29 +1603,32 @@ public class Transposition extends JFrame implements ActionListener{
                                 
                             }
                             area.setOutput(output);
-                            
+                           
                         }
                         
                         else if(width.equals("Left")){
                             
                             //store the two containers into one, encryption process#1
-                            for(i=0;i<con3.size();i++){
+                            finCon.add(con1.get(con1.size()-1));
+                            finCon.add(con2.get(con2.size()-1));
+                            for(i=con3.size()-1;i>=0;i--){
                                 
                                 finCon.add(con3.get(i));
                                 
                             }
-                            finCon.add(con2.get(con2.size()-1));
-                            for(i=con1.size()-1;i>=0;i--){
+                            finCon.add(con2.get(0));
+                            for(i=0;i<con1.size()-1;i++){
                                 
                                 finCon.add(con1.get(i));
                                 
                             }
-                            for(i=0;i<con2.size()-1;i++){
+                            for(i=con2.size()-2;i>0;i--){
                                 
                                 finCon.add(con2.get(i));
                                 
                             }
                             
+                            //transforming the character array to string then place it on output textarea
                             for(i=0;i<finCon.size();i++){
                                 
                                 output=output.concat(finCon.get(i).toString());
@@ -1700,216 +1703,38 @@ public class Transposition extends JFrame implements ActionListener{
                         
                         if(width.equals("Right")){
                             
-                            //store the two containers into one, encryption process#1
-                            finCon.add(con1.get(con1.size()-1));
-                            finCon.add(con2.get(con2.size()-1));
+                             //store the two containers into one, encryption process#1
+                            for(i=0;i<con4.size();i++){
+                                
+                                finCon.add(con4.get(i));
+                                
+                            }
                             finCon.add(con3.get(con3.size()-1));
-                            for(i=con4.size()-1;i>=0;i--){
-                                
-                                finCon.add(con4.get(i));
-                                
-                            }
-                            finCon.add(con3.get(0));
-                            finCon.add(con2.get(0));
-                            for(i=0;i<con1.size()-1;i++){
-                                
-                                finCon.add(con1.get(i));
-                                
-                            }
-                            for(i=con2.size()-2;i>0;i--){
-                                
-                                finCon.add(con2.get(i));
-                                
-                            }
-                            for(i=1;i<con3.size()-1;i++){
-                                
-                                finCon.add(con3.get(i));
-                                
-                            }
-                            
-                            //transforming the character array to string then place it on output textarea
-                            for(i=0;i<finCon.size();i++){
-                                
-                                output=output.concat(finCon.get(i).toString());
-                                
-                            }
-                            area.setOutput(output);
-                            
-                        }
-                        
-                        else if(width.equals("Left")){
-                            
-                            //store the two containers into one, encryption process#1
-                            for(i=0;i<con1.size();i++){
-                                
-                                finCon.add(con1.get(i));
-                                
-                            }
                             finCon.add(con2.get(con2.size()-1));
-                            finCon.add(con3.get(con3.size()-1));
-                            for(i=con4.size()-1;i>=0;i--){
-                                
-                                finCon.add(con4.get(i));
-                                
-                            }
-                            finCon.add(con3.get(0));
-                            for(i=0;i<con2.size()-1;i++){
-                                
-                                finCon.add(con2.get(i));
-                                
-                            }
-                            for(i=con3.size()-2;i>0;i--){
-                                
-                                finCon.add(con3.get(i));
-                                
-                            }
-                            
-                            for(i=0;i<finCon.size();i++){
-                                
-                                output=output.concat(finCon.get(i).toString());
-                                
-                            }
-                            area.setOutput(output);
-                            
-                        }
-                        
-                        else{
-                            
-                            JOptionPane.showMessageDialog(this,"Please indicate whether starting from right or left!");
-                            
-                        }
-                        
-                    }
-                    
-                    else if(height.equals("Bottom")){
-                        
-                        if(width.equals("Right")){
-                            
-                            //store the two containers into one, encryption process#1
-                            for(i=con4.size()-1;i>=0;i--){
-                                
-                                finCon.add(con4.get(i));
-                                
-                            }
-                            finCon.add(con3.get(0));
-                            finCon.add(con2.get(0));
-                            for(i=0;i<con1.size();i++){
-                                
-                                finCon.add(con1.get(i));
-                                
-                            }
-                            for(i=con2.size()-1;i>0;i--){
-                                
-                                finCon.add(con2.get(i));
-                                
-                            }
-                            for(i=1;i<con3.size();i++){
-                                
-                                finCon.add(con3.get(i));
-                                
-                            }
-                            
-                            //transforming the character array to string then place it on output textarea
-                            for(i=0;i<finCon.size();i++){
-                                
-                                output=output.concat(finCon.get(i).toString());
-                                
-                            }
-                            area.setOutput(output);
-                            
-                        }
-                        
-                        else if(width.equals("Left")){
-                            
-                            //store the two containers into one, encryption process#1
-                            finCon.add(con4.get(0));
-                            finCon.add(con3.get(0));
-                            finCon.add(con2.get(0));
-                            for(i=0;i<con1.size();i++){
-                                
-                                finCon.add(con1.get(i));
-                                
-                            }
-                            finCon.add(con2.get(con2.size()-1));
-                            finCon.add(con3.get(con3.size()-1));
-                            for(i=con4.size()-1;i>0;i--){
-                                
-                                finCon.add(con4.get(i));
-                                
-                            }
-                            for(i=1;i<con3.size()-1;i++){
-                                
-                                finCon.add(con3.get(i));
-                                
-                            }
-                            for(i=con2.size()-2;i>0;i--){
-                                
-                                finCon.add(con2.get(i));
-                                
-                            }
-                            
-                            for(i=0;i<finCon.size();i++){
-                                
-                                output=output.concat(finCon.get(i).toString());
-                                
-                            }
-                            area.setOutput(output);
-                            
-                        }
-                        
-                        else{
-                            
-                            JOptionPane.showMessageDialog(this,"Please indicate whether starting from right or left!");
-                            
-                        }
-                        
-                    }
-                    
-                    else{
-                        
-                        JOptionPane.showMessageDialog(this,"Please indicate whether starting from top or bottom!");
-                        
-                    }
-                    
-                }
-                
-                else if(dirInput.equals("CounterClockwise")){
-                    
-                    if(height.equals("Top")){
-                        
-                        if(width.equals("Right")){
-                            
-                            //store the two containers into one, encryption process#1
                             for(i=con1.size()-1;i>=0;i--){
                                 
                                 finCon.add(con1.get(i));
                                 
                             }
                             finCon.add(con2.get(0));
-                            finCon.add(con3.get(0));
-                            for(i=0;i<con4.size();i++){
-                                
-                                finCon.add(con4.get(i));
-                                
-                            }
-                            for(i=con3.size()-1;i>0;i--){
+                            for(i=0;i<con3.size()-1;i++){
                                 
                                 finCon.add(con3.get(i));
                                 
                             }
-                            for(i=1;i<con2.size();i++){
+                            for(i=con2.size()-2;i>0;i--){
                                 
                                 finCon.add(con2.get(i));
                                 
                             }
                             
-                            //transforming the character array to string then place it on output textarea
                             for(i=0;i<finCon.size();i++){
                                 
                                 output=output.concat(finCon.get(i).toString());
                                 
                             }
                             area.setOutput(output);
+                            
                             
                         }
                         
@@ -1949,6 +1774,7 @@ public class Transposition extends JFrame implements ActionListener{
                             }
                             area.setOutput(output);
                             
+                            
                         }
                         
                         else{
@@ -1963,7 +1789,7 @@ public class Transposition extends JFrame implements ActionListener{
                         
                         if(width.equals("Right")){
                             
-                            //store the two containers into one, encryption process#1
+                           //store the two containers into one, encryption process#1
                             finCon.add(con4.get(con4.size()-1));
                             finCon.add(con3.get(con3.size()-1));
                             finCon.add(con2.get(con2.size()-1));
@@ -1998,25 +1824,85 @@ public class Transposition extends JFrame implements ActionListener{
                             }
                             area.setOutput(output);
                             
+                            
                         }
                         
                         else if(width.equals("Left")){
                             
                             //store the two containers into one, encryption process#1
-                            for(i=0;i<con4.size();i++){
-                                
-                                finCon.add(con4.get(i));
-                                
-                            }
-                            finCon.add(con3.get(con3.size()-1));
-                            finCon.add(con2.get(con2.size()-1));
                             for(i=con1.size()-1;i>=0;i--){
                                 
                                 finCon.add(con1.get(i));
                                 
                             }
                             finCon.add(con2.get(0));
-                            for(i=0;i<con3.size()-1;i++){
+                            finCon.add(con3.get(0));
+                            for(i=0;i<con4.size();i++){
+                                
+                                finCon.add(con4.get(i));
+                                
+                            }
+                            for(i=con3.size()-1;i>0;i--){
+                                
+                                finCon.add(con3.get(i));
+                                
+                            }
+                            for(i=1;i<con2.size();i++){
+                                
+                                finCon.add(con2.get(i));
+                                
+                            }
+                            
+                            //transforming the character array to string then place it on output textarea
+                            for(i=0;i<finCon.size();i++){
+                                
+                                output=output.concat(finCon.get(i).toString());
+                                
+                            }
+                            area.setOutput(output);
+                            
+                            
+                        }
+                        
+                        else{
+                            
+                            JOptionPane.showMessageDialog(this,"Please indicate whether starting from right or left!");
+                            
+                        }
+                        
+                    }
+                    
+                    else{
+                        
+                        JOptionPane.showMessageDialog(this,"Please indicate whether starting from top or bottom!");
+                        
+                    }
+                    
+                }
+                
+                else if(dirInput.equals("CounterClockwise")){
+                    
+                    if(height.equals("Top")){
+                        
+                        if(width.equals("Right")){
+                            
+                            //store the two containers into one, encryption process#1
+                            finCon.add(con4.get(0));
+                            finCon.add(con3.get(0));
+                            finCon.add(con2.get(0));
+                            for(i=0;i<con1.size();i++){
+                                
+                                finCon.add(con1.get(i));
+                                
+                            }
+                            finCon.add(con2.get(con2.size()-1));
+                            finCon.add(con3.get(con3.size()-1));
+                            for(i=con4.size()-1;i>0;i--){
+                                
+                                finCon.add(con4.get(i));
+                                
+                            }
+                            for(i=1;i<con3.size()-1;i++){
                                 
                                 finCon.add(con3.get(i));
                                 
@@ -2034,6 +1920,130 @@ public class Transposition extends JFrame implements ActionListener{
                             }
                             area.setOutput(output);
                             
+                            
+                        }
+                        
+                        else if(width.equals("Left")){
+                            
+                            //store the two containers into one, encryption process#1
+                            for(i=0;i<con1.size();i++){
+                                
+                                finCon.add(con1.get(i));
+                                
+                            }
+                            finCon.add(con2.get(con2.size()-1));
+                            finCon.add(con3.get(con3.size()-1));
+                            for(i=con4.size()-1;i>=0;i--){
+                                
+                                finCon.add(con4.get(i));
+                                
+                            }
+                            finCon.add(con3.get(0));
+                            for(i=0;i<con2.size()-1;i++){
+                                
+                                finCon.add(con2.get(i));
+                                
+                            }
+                            for(i=con3.size()-2;i>0;i--){
+                                
+                                finCon.add(con3.get(i));
+                                
+                            }
+                            
+                            for(i=0;i<finCon.size();i++){
+                                
+                                output=output.concat(finCon.get(i).toString());
+                                
+                            }
+                            area.setOutput(output);
+                            
+                            
+                        }
+                        
+                        else{
+                            
+                            JOptionPane.showMessageDialog(this,"Please indicate whether starting from right or left!");
+                            
+                        }
+                        
+                    }
+                    
+                    else if(height.equals("Bottom")){
+                        
+                        if(width.equals("Right")){
+                            
+                             //store the two containers into one, encryption process#1
+                            for(i=con4.size()-1;i>=0;i--){
+                                
+                                finCon.add(con4.get(i));
+                                
+                            }
+                            finCon.add(con3.get(0));
+                            finCon.add(con2.get(0));
+                            for(i=0;i<con1.size();i++){
+                                
+                                finCon.add(con1.get(i));
+                                
+                            }
+                            for(i=con2.size()-1;i>0;i--){
+                                
+                                finCon.add(con2.get(i));
+                                
+                            }
+                            for(i=1;i<con3.size();i++){
+                                
+                                finCon.add(con3.get(i));
+                                
+                            }
+                            
+                            //transforming the character array to string then place it on output textarea
+                            for(i=0;i<finCon.size();i++){
+                                
+                                output=output.concat(finCon.get(i).toString());
+                                
+                            }
+                            area.setOutput(output);
+                            
+                        }
+                        
+                        else if(width.equals("Left")){
+                            
+                            //store the two containers into one, encryption process#1
+                            finCon.add(con1.get(con1.size()-1));
+                            finCon.add(con2.get(con2.size()-1));
+                            finCon.add(con3.get(con3.size()-1));
+                            for(i=con4.size()-1;i>=0;i--){
+                                
+                                finCon.add(con4.get(i));
+                                
+                            }
+                            finCon.add(con3.get(0));
+                            finCon.add(con2.get(0));
+                            for(i=0;i<con1.size()-1;i++){
+                                
+                                finCon.add(con1.get(i));
+                                
+                            }
+                            for(i=con2.size()-2;i>0;i--){
+                                
+                                finCon.add(con2.get(i));
+                                
+                            }
+                            for(i=1;i<con3.size()-1;i++){
+                                
+                                finCon.add(con3.get(i));
+                                
+                            }
+                            
+                            //transforming the character array to string then place it on output textarea
+                            for(i=0;i<finCon.size();i++){
+                                
+                                output=output.concat(finCon.get(i).toString());
+                                
+                            }
+                            area.setOutput(output);
+                            
+                           
                         }
                         
                         else{
